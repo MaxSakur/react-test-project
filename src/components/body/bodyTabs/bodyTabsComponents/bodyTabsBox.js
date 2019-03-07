@@ -7,24 +7,37 @@ import React from "react";
 const ModalDefault = ({item,}) => {
     const {elementHeader, image, ...rest} = item
 
-    console.log('image', image)
     return (
         <Modal.Dialog>
-            <Modal.Header closeButton>
-                <Modal.Title>{elementHeader}</Modal.Title>
-            </Modal.Header>
+            {elementHeader ?
+                <Modal.Header closeButton>
+                    <Modal.Title>{elementHeader}</Modal.Title>
+                </Modal.Header>
+                :
+            null
+            }
+
 
             <Modal.Body>
-                { image ? <img src={image}/>: <p>NO IMG</p>}
-                {Object.entries(rest).map((item, index)=>{
-                    console.log('item', item)
-                    return (
+                <div className= { image ? "modal--withImage" : null }>
 
-                        <p key={index} className="modal--body_field">{item[0]}
-                            <span className="modal--body_value">{item[1]}</span>
-                        </p>
-                    )
-                })}
+                    { image ? <img className="modal--withImage-image" src={image}/>: null }
+
+                    <ul className="modal--textSection">
+                        {Object.entries(rest).map((item, index)=>{
+
+                            return (
+
+                                <li key={index} >
+                                    <p className="modal--body_field">{item[0]}</p>
+                                    <span className="modal--body_value">{item[1]}</span>
+                                </li>
+                            )
+                        })}
+                    </ul>
+
+                </div>
+
 
 
             </Modal.Body>

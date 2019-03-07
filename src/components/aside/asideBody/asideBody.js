@@ -34,7 +34,7 @@ export default class AsideBody extends React.Component {
             <ul className="asideBody--mainSettings">
                 {mainSettingsList.map((item, index) =>
                     <li className="asideBody--mainSettings-item " key={item.id}>
-                        <p style={this.state.addClass === index ? {fontSize: '1.3em'} : {fontSize: '1em'}} onClick={()=>this.toggle(index)}>
+                        <p className={this.state.addClass === index ? 'active' : null} onClick={()=>this.toggle(index)}>
                             {item.name}
                         </p>
                     </li>

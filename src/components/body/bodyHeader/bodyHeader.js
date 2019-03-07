@@ -7,7 +7,7 @@ import './bodyHeader.css'
 const choosen = {
     name: 'Christopher Smith',
     position: 'UI & UX Design @ Upmitt',
-    link: 'https://www.facebook.com/max.kalyakin',
+    link: 'https://www.linkedin.com/in/max-kaliakin-789ba5121/',
 
     phone: '06 56 44 31 22',
     personalEmail: 'van_gogh@amsterdam.am',

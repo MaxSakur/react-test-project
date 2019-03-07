@@ -1,0 +1,34 @@
+.asideBody {
+    grid-row: 2/-1;
+    background-color: transparent;
+    display: grid;
+
+}
+.asideBody li {
+    padding-left: var(--default-gatter);
+}
+.asideBody--mainSettings li p,
+.asideBody--otherSettings li p
+{
+    color: var(--main-text-color);
+    font-size: 1em;
+    font-weight: 600;
+    padding: var(--default-gatter);
+    text-transform: capitalize;
+    transition: all 1s ease-in-out;
+}
+
+
+
+
+.asideBody--footer-image,
+.asideBody--footer-image2 {
+    width: calc(var(--default-gatter) * 2);
+    height: auto;
+    display: block;
+    margin: auto;
+}
+.asideBody--footer-image2 {
+    padding-top: var(--default-gatter);
+    width: calc(var(--default-gatter) * 3);
+}

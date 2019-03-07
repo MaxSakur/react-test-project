@@ -1,0 +1,10 @@
+aside {
+
+    grid-column: 1/2;
+    grid-row: 1/-1;
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    position: sticky;
+    top: 0;
+    background-image: url('https://images.pexels.com/photos/956981/milky-way-starry-sky-night-sky-star-956981.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+}

@@ -1,0 +1,105 @@
+
+/* CUSTOM */
+
+.bodyTabs {
+    grid-column: 2/-1;
+    grid-row: 2/-1;
+    background-color: var(--smooth-bg-color);
+}
+
+.bodyTabs--bigSection {
+    overflow-x: hidden;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 1fr;
+    padding-right: var(--default-gatter);
+}
+.bodyTabs--smallSection {
+    overflow-x: hidden;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 1fr;
+
+}
+
+.bodyTabs--mainBoxItem {
+    background-color: var(--white-bg-color);
+    border-radius: var(--default-borderRadius);
+    box-shadow: var( --shadow);
+}
+
+/* TABS */
+
+.react-tabs__tab {
+    padding: 0;
+
+}
+.react-tabs__tab-list {
+    border: none;
+    color: var(--secondary-text-color);
+    margin: 0;
+    z-index: 1;
+    position: relative;
+    box-shadow: var(--shadow);
+    background-color: var(--white-bg-color);
+
+}
+.react-tabs__tab--selected {
+    border: none;
+    border-bottom: 5px solid var(--active-border-color) ;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+
+}
+
+.react-tabs__tab-list p {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0 var(--default-gatter) 20px;
+}
+
+.react-tabs__tab-panel {
+    z-index: 0;
+    background-color: var(--smooth-bg-color);
+    padding: var(--default-gatter);
+
+}
+.react-tabs__tab-panel--selected {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-row: 2/-1;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding: var(--default-gatter) var(--default-gatter);
+}
+
+/* MODAL*/
+
+.modal-dialog {
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+}
+.modal-content{
+    box-shadow: var(--shadow);
+    margin-bottom: calc(var(--default-gatter)/2);
+}
+.modal-header {
+    padding: calc(var(--default-gatter)/2);
+}
+.modal-title {
+    font-weight: bold;
+}
+.modal--body_field {
+    margin: 0;
+    font-size: 1em;
+    color: var(--secondary-text-color);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.modal--body_value {
+    font-size: 1em;
+    font-weight: bold;
+    border-bottom: 1px dashed var(--secondary-text-color);
+    color: var( --main-dark-color);
+}

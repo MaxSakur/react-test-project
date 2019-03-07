@@ -1,0 +1,23 @@
+:root {
+    /*TEXT*/
+    --main-dark-color: #000;
+    --main-text-color: #fff;
+    --secondary-text-color: #C7C7C7;
+
+    /*BORDER & LINES */
+    --active-border-color: #00C3DC;
+    --default-borderRadius: 8px;
+
+    /*BG*/
+    --white-bg-color: #fff;
+    --smooth-bg-color: #F9F9FA;
+
+    /* GATTER */
+    --default-gatter: 20px;
+
+    /* BOX SHADOW */
+    --shadow: 0px 5px 22px -10px rgba(0,0,0,0.75);
+}
+
+
+

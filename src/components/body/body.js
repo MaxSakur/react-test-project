@@ -3,8 +3,9 @@ import React, { Component } from 'react';
 
 // CUSTOM
 import './body.css'
-import BodyTabs from './bodyTabs/bodyTabs'
+import BodyTabs from './bodyTabs/BodyTabs'
 import BodyHeader from './bodyHeader/bodyHeader'
+
 
 export default class Body extends Component {
     render() {
@@ -12,6 +13,7 @@ export default class Body extends Component {
             <main>
                 <BodyHeader/>
                 <BodyTabs/>
+                
             </main>);
     }
 }

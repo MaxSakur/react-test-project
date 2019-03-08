@@ -1,17 +1,5 @@
 import React from "react";
 
-const boxData = ['Name','Name2', 'Name3']
-
-
-
-
-const bodyTabs = [
-    {id: 1, name: 'profile', components: [{}] },
-    {id: 2, name: 'tags'},
-    {id: 3, name: 'resume'},
-    {id: 4, name: 'documents'},
-]
-
 const MAX_ITEMS = 2;
 
 export default class MainBoxItem extends React.Component{
@@ -20,14 +8,7 @@ export default class MainBoxItem extends React.Component{
             isOpen: false,
         };
 
-        this.items = [
-            'Item 1',
-            'Item 2',
-            'Item 3',
-            'Item 4',
-            'Item 5',
-            'Item 6',
-        ];
+        this.items = this.props.children;
     }
 
     toggle = () => {
@@ -43,13 +24,21 @@ export default class MainBoxItem extends React.Component{
 
     render() {
         return(
-            <div>
-                {this.getRenderedItems().map((item, id) => (
-                    <div key={id}>{item}</div>
-                ))}
-                <button onClick={this.toggle}>
-                    {this.state.isOpen ? 'less' : 'more'}
-                </button>
+            <div className="modal-dialog bodyTabs--bigSection-item">
+                <div className="modal-content bordered">
+                    <div className="modal-header">
+                        <h2>{this.props.themeName}</h2>
+                    </div>
+                
+                    {this.getRenderedItems().map((item, id) => (
+                        <div key={id}>{item}</div>
+                    ))}
+
+                    <button className="hide-button" onClick={this.toggle}>
+                        <p>{this.state.isOpen ? `Hide ${this.items.length - MAX_ITEMS} `  : `Show ${this.items.length - MAX_ITEMS} more`}</p>
+                        <img src="" ></img>
+                    </button>
+                </div>
             </div>
         );
     }

@@ -1,6 +1,9 @@
 
 /* CUSTOM */
-
+.bordered {
+    border: 1px solid rgba(0,0,0,.2) !important;
+    border-radius: var(--default-borderRadius) !important;
+}
 .bodyTabs {
     grid-column: 2/-1;
     grid-row: 2/-1;
@@ -18,17 +21,44 @@
     border: none;
     border-radius: 0;
     padding: 0 2.5%;
+    box-shadow: none;
 }
 
-.bodyTabs--bigSection .modal-content:after {
+.bodyTabs--bigSection .bodyTabs--bigSection-item {
+    margin-bottom: var(--default-gatter);
+}
+
+.bodyTabs--bigSection-item .modal-body {
+    padding: 0;
+}
+.bodyTabs--bigSection-item .modal--textSection {
+    margin-bottom: 0; 
+}
+.bodyTabs--bigSection .hide-button {    
+    background-color: transparent;
+    border: none;
+    color: var( --secondary-text-color);
+    font-size: 1em;
+    font-weight: bold;
+    padding: calc(var(--default-gatter)/2) 0;
+    cursor: pointer;
+}
+.bodyTabs--bigSection .modal--textSection li:first-child span {
+    font-size: 1.3em;
+}
+.bodyTabs--bigSection .modal--textSection li:last-child span {
+    font-size: .8em;
+    color: var( --secondary-text-color);
+}
+
+.bodyTabs--bigSection .modal-body:after {
     content: '';
     width: 95%;
     display: block;
     margin: auto;
-    border-bottom: 1px solid var(--secondary-text-color);
-
+    padding-top: calc(var(--default-gatter)/2);
+    border-bottom: 1px solid var(--border-color);
 }
-
 
 .bodyTabs--smallSection {
     overflow-x: hidden;
@@ -100,7 +130,8 @@
     color: var(--secondary-text-color);
     margin: 0;
     z-index: 1;
-    position: relative;
+    position: sticky;
+    top: 0;
     box-shadow: var(--shadow);
     background-color: var(--white-bg-color);
 

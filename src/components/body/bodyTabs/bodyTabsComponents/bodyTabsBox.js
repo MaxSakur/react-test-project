@@ -21,13 +21,12 @@ const ModalDefault = ({item,}) => {
             <Modal.Body>
                 <div className= { image ? "modal--withImage" : null }>
 
-                    { image ? <img className="modal--withImage-image" src={image}/>: null }
+                    { image ? <img className="modal--withImage-image" src={image} alt="test-img"/>: null }
 
                     <ul className="modal--textSection">
+
                         {Object.entries(rest).map((item, index)=>{
-
                             return (
-
                                 <li key={index} >
                                     <p className="modal--body_field">{item[0]}</p>
                                     <span className="modal--body_value">{item[1]}</span>

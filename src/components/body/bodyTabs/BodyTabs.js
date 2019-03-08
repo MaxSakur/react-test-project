@@ -3,8 +3,6 @@ import React, { Component } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import "react-tabs/style/react-tabs.css";
 
-import mainBoxItem from './bodyTabsComponents/mainBoxItem'
-
 // CUSTOM
 import './bodyTabs.css'
 import ModalDefault from './bodyTabsComponents/bodyTabsBox'
@@ -43,6 +41,7 @@ const smallSectionElements = [
 
         ]
 
+
 const firstBigItem = [
     {
         // elementHeader: 'Experiences',
@@ -74,15 +73,26 @@ const firstBigItem = [
 const BiggerSection = (props) => {
     return (
         <div className="bodyTabs--bigSection">
-
-                {firstBigItem.map((item, index)=>{
-                    return (
-                        <ModalDefault
-                            key={index}
-                            item={item}
-                        />
-                    )
-                })}
+                <MainBoxItem themeName="Experience">
+                    {firstBigItem.map((item, index)=>{
+                        return (
+                            <ModalDefault
+                                key={index}
+                                item={item}
+                            />
+                        )
+                    })}
+                </MainBoxItem>
+                <MainBoxItem themeName="Formation">
+                    {firstBigItem.map((item, index)=>{
+                        return (
+                            <ModalDefault
+                                key={index}
+                                item={item}
+                            />
+                        )
+                    })}
+                </MainBoxItem>
 
 
         </div>
